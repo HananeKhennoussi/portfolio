@@ -97,13 +97,43 @@
     #projects h3 {
   margin-top: 20px;
 }
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hanane Khennoussi</h1>
-<p>Étudiante en informatique à Sorbonne Université, curieuse et motivée à développer mes compétences dans différents domaines</p>
-  </header>
+    <header>
+        <img src="photo.jpg" alt="Photo de Hanane Khennoussi" class="profile-pic">
+        <h1>Hanane Khennoussi</h1>
+        <p>Étudiante en informatique à Sorbonne Université</p>
+      </header>
 
   <nav>
     <a href="#about">À propos</a>
@@ -214,13 +244,27 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>Email : khennoussihanane8@gmail.com</p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/hanane-khennoussi-a223ba361/" target="_blank">Mon profil LinkedIn</a></p>
-        <p>GitHub : <a href="https://github.com/HananeKhennoussi" target="_blank">Mon GitHub</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/hanane-khennoussi-a223ba361/" target="_blank">
+              🔗 LinkedIn
+            </a>
+          </p>
+          
+          <p>
+            <a href="https://github.com/HananeKhennoussi" target="_blank">
+              💻 GitHub
+            </a>
+          </p>
       </section>
   </div>
 
   <footer>
-    <p>© 2026 Ton Nom - Mon Portfolio</p>
+    <p>© <span id="year"></span> Hanane Khennoussi</p>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
